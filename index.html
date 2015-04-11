@@ -1,0 +1,44 @@
+
+<html>
+  <head>
+    <title>Your Name as Background-Color</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /** Default bg color */
+      body { background: orange; }
+
+      #myForm { width: 50%; }
+
+      .container {
+        height: 100%;
+      }
+      
+      .vertical-align {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+      }
+
+      .vertical-align > [class^="col-"],
+      .vertical-align > [class*=" col-"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container"> 
+      <div class="row vertical-align">
+        <div class="col-xs-12"> 
+          <form action="/" id="myForm">
+            <input class="form-control input-lg text-center" id="myName" type="text" placeholder="Your name please :-) - press enter">
+          </form>         
+        </div>
+      </div>         
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
