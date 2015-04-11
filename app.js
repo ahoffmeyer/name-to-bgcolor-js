@@ -2,7 +2,7 @@
   // Use strict mode
   "use strict"
 
-  // defineing vars
+  // defining vars
   var myForm = document.getElementById('myForm'), 
       myName = document.getElementById('myName'), 
 
