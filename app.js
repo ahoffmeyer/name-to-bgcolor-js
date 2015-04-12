@@ -22,7 +22,7 @@
         // calculate the amount of chars for the nth part of array
         sliceEnd = Math.ceil( textString.length/ ( devider ? devider = devider : devider = 3 ) );
 
-        if ( textString ) {        
+        if ( textString ) {  
           // Return closure
           return function() {
             // save part in array and calculate the ASCII sum
@@ -84,8 +84,21 @@
     if ( myName.value ) {
       // set back global array
       splittedTextString = [];
+      // vars
+      var nullString = "",
+          inputValue = myName.value;
+
+      // check if text from input is too short
+      if (inputValue.length < 3) {
+        for (var i = 0; i < 3 - inputValue.length; i++) {
+          nullString += '0';
+        }
+        inputValue = inputValue + nullString;
+        console.log('Short Text: ', inputValue);
+      }
+
       // set new background color
-      document.body.style.background = "rgb("+ rgbOutput( myName.value ) +")";
+      document.body.style.background = "rgb("+ rgbOutput( inputValue ) +")";
     } else {
       console.log('No name given');
     }
